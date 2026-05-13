@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import specialtiesImg from "@/assets/menu-specialties.jpg";
 import winesImg from "@/assets/menu-wines.jpg";
 import dessertsImg from "@/assets/menu-desserts.jpg";
@@ -27,13 +26,10 @@ const MenuSection = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {categories.map((cat, i) => (
-            <motion.div
+            <div
               key={cat.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="border border-border rounded-2xl overflow-hidden transition-colors hover:bg-secondary/50"
+              className="border border-border rounded-2xl overflow-hidden transition-colors hover:bg-secondary/50 animate-fade-up"
+              style={{ animationDelay: `${i * 150}ms` }}
             >
               <img
                 src={cat.image}
@@ -44,16 +40,13 @@ const MenuSection = () => {
                 <h3 className="font-display text-xl text-foreground mb-3">{cat.title}</h3>
                 <p className="text-sm text-muted-foreground">{cat.description}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="text-center mt-12"
+        <div
+          className="text-center mt-12 animate-fade-up"
+          style={{ animationDelay: "500ms" }}
         >
           <a
             href={`${import.meta.env.BASE_URL}Meni_Brioni.pdf`}
@@ -63,7 +56,7 @@ const MenuSection = () => {
           >
             Погледни го менито
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

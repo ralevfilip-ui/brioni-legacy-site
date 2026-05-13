@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
 import ReservationModal from "@/components/ReservationModal";
 
@@ -8,40 +7,21 @@ const HeroSection = () => {
   return (
     <>
     <section id="hero" className="relative min-h-svh grid place-items-center overflow-hidden">
-      {/* Background image */}
       <div className="absolute inset-0">
         <img src={heroBg} alt="" className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-background/70" />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-
-
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          className="heading-hero font-display text-foreground mb-6"
-        >
+        <h1 className="heading-hero font-display text-foreground mb-6 animate-fade-up [animation-delay:200ms]">
           Бриони: Наследство на вкусот од 1956 година.
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-body text-muted-foreground mx-auto mb-10 max-w-2xl"
-        >
+        <p className="text-body text-muted-foreground mx-auto mb-10 max-w-2xl animate-fade-up [animation-delay:400ms]">
           Традиција што се чувствува, квалитет што се памети.
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
-          className="flex items-center justify-center gap-4"
-        >
+        <div className="flex items-center justify-center gap-4 animate-fade-up [animation-delay:600ms]">
           <a
             href={`${import.meta.env.BASE_URL}Meni_Brioni.pdf`}
             target="_blank"
@@ -57,18 +37,12 @@ const HeroSection = () => {
           >
             Резервација
           </button>
-        </motion.div>
+        </div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-up [animation-delay:1000ms]">
         <div className="w-px h-12 bg-muted-foreground/40 animate-pulse" />
-      </motion.div>
+      </div>
     </section>
     <ReservationModal open={reservationOpen} onOpenChange={setReservationOpen} />
     </>

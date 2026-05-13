@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import parkImg from "@/assets/park-kosturnica.jpg";
 
 const ParkSection = () => {
@@ -6,25 +5,15 @@ const ParkSection = () => {
     <section id="park" className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="animate-fade-up">
             <img
               src={parkImg}
               alt="Спомен-костурницата во Градскиот парк во Кавадарци"
               className="w-full h-auto object-contain rounded-2xl outline outline-1 outline-border -outline-offset-1"
             />
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+          <div className="animate-fade-up [animation-delay:200ms]">
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Паркот</p>
             <h2 className="heading-section font-display text-foreground mb-8">
               Зеленило, историја и мир
@@ -49,7 +38,7 @@ const ParkSection = () => {
             >
               Резервирајте
             </a>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

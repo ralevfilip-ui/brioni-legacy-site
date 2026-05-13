@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
@@ -29,34 +28,21 @@ const TestimonialsSection = () => {
   return (
     <section className="py-24 sm:py-32 bg-secondary/30">
       <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="animate-fade-up">
           <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Впечатоци</p>
           <h2 className="heading-section font-display text-foreground mb-16">
             Зборовите на нашите гости
           </h2>
-        </motion.div>
+        </div>
 
         <div className="relative min-h-[200px]">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={current}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.4 }}
-            >
-              <blockquote className="font-display text-2xl sm:text-3xl text-foreground leading-relaxed mb-8">
-                „{testimonials[current].quote}"
-              </blockquote>
-              <p className="text-foreground font-medium">{testimonials[current].author}</p>
-              <p className="text-sm text-muted-foreground mt-1">{testimonials[current].role}</p>
-            </motion.div>
-          </AnimatePresence>
+          <div key={current} className="animate-fade-up">
+            <blockquote className="font-display text-2xl sm:text-3xl text-foreground leading-relaxed mb-8">
+              „{testimonials[current].quote}"
+            </blockquote>
+            <p className="text-foreground font-medium">{testimonials[current].author}</p>
+            <p className="text-sm text-muted-foreground mt-1">{testimonials[current].role}</p>
+          </div>
         </div>
 
         <div className="flex items-center justify-center gap-4 mt-10">
