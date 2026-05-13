@@ -56,7 +56,7 @@ const MenuSection = () => {
           className="text-center mt-12"
         >
           <a
-            href="/Meni_Brioni.pdf"
+            href={`${import.meta.env.BASE_URL}Meni_Brioni.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full border border-primary text-primary px-8 py-3 text-sm tracking-wide hover:bg-primary/10 transition-colors"

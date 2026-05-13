@@ -13,7 +13,7 @@ type NavLink = {
 const navLinks: NavLink[] = [
   { label: "Почетна", href: "#hero" },
   { label: "За нас", href: "#heritage" },
-  { label: "Мени", href: "/Meni_Brioni.pdf", external: true },
+  { label: "Мени", href: `${import.meta.env.BASE_URL}Meni_Brioni.pdf`, external: true },
   { label: "Парк", href: "#park" },
   { label: "Резервации", href: "#", action: "reservation" },
   { label: "Контакт", href: "#contact" },

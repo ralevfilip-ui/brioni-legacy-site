@@ -43,7 +43,7 @@ const HeroSection = () => {
           className="flex items-center justify-center gap-4"
         >
           <a
-            href="/Meni_Brioni.pdf"
+            href={`${import.meta.env.BASE_URL}Meni_Brioni.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-primary text-primary-foreground font-semibold py-3 px-8 rounded-full text-base transition-transform duration-200 ease-in-out hover:scale-105 active:scale-100"
