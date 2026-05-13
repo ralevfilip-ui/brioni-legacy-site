@@ -21,7 +21,7 @@ const HeroSection = () => {
           Традиција што се чувствува, квалитет што се памети.
         </p>
 
-        <div className="flex items-center justify-center gap-4 animate-fade-up [animation-delay:600ms]">
+        <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-up [animation-delay:600ms]">
           <a
             href={`${import.meta.env.BASE_URL}Meni_Brioni.pdf`}
             target="_blank"

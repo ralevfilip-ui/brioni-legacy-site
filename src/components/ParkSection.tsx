@@ -1,10 +1,13 @@
+import { useState } from "react";
 import parkImg from "@/assets/park-kosturnica.jpg";
+import ReservationModal from "@/components/ReservationModal";
 
 const ParkSection = () => {
+  const [reservationOpen, setReservationOpen] = useState(false);
   return (
-    <section id="park" className="py-24 sm:py-32">
+    <section id="park" className="py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="animate-fade-up">
             <img
               src={parkImg}
@@ -32,15 +35,17 @@ const ParkSection = () => {
                 и Тиквешијата. Паркот не е само природа — тој носи историја и памет.
               </p>
             </div>
-            <a
-              href="#contact"
+            <button
+              type="button"
+              onClick={() => setReservationOpen(true)}
               className="inline-block mt-8 bg-primary text-primary-foreground font-semibold py-3 px-8 rounded-full text-base transition-transform duration-200 hover:scale-105 active:scale-100"
             >
               Резервирајте
-            </a>
+            </button>
           </div>
         </div>
       </div>
+      <ReservationModal open={reservationOpen} onOpenChange={setReservationOpen} />
     </section>
   );
 };

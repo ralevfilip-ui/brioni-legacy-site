@@ -97,7 +97,7 @@ const ReservationModal = ({ open, onOpenChange }: ReservationModalProps) => {
       `Време: ${values.time}`,
     ].join("\n");
 
-    window.location.href = `mailto:filipralev@yahoo.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:brionipark@yahoo.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     setSuccess(true);
     form.reset();
@@ -219,7 +219,7 @@ const ReservationModal = ({ open, onOpenChange }: ReservationModalProps) => {
                     <FormControl>
                       <Input
                         type="email"
-                        placeholder="vie@email.com"
+                        placeholder="vas@email.com"
                         {...field}
                       />
                     </FormControl>

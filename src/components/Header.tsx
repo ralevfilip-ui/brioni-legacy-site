@@ -68,7 +68,7 @@ const Header = () => {
         scrolled ? "bg-background/80 backdrop-blur-lg border-b border-border" : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 pt-12 pb-6 lg:py-6 lg:px-8 relative">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 pt-4 pb-4 lg:py-6 lg:px-8 relative">
         <ul className="hidden lg:flex items-center gap-8">
           {navLinks.slice(0, 3).map((link) => (
             <li key={link.label}>{renderLink(link, desktopLinkClass)}</li>
@@ -78,7 +78,7 @@ const Header = () => {
         <div className="w-10 lg:hidden" />
 
         <a href="#hero" className="flex-shrink-0 absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0">
-          <img src={logo} alt="Бриони лого" className="h-48 lg:h-44 w-auto" />
+          <img src={logo} alt="Бриони лого" className="h-28 lg:h-44 w-auto" />
         </a>
 
         <ul className="hidden lg:flex items-center gap-8">
@@ -90,7 +90,7 @@ const Header = () => {
         <button
           className="lg:hidden text-foreground z-10"
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
+          aria-label="Отвори мени"
         >
           {mobileOpen ? <X size={28} /> : <Menu size={28} />}
         </button>

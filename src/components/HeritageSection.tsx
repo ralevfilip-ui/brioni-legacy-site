@@ -4,9 +4,9 @@ import interiorImg from "@/assets/heritage-interior.jpg";
 
 const HeritageSection = () => {
   return (
-    <section id="heritage" className="py-24 sm:py-32">
+    <section id="heritage" className="py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="animate-fade-up">
             <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">За нас</p>
             <h2 className="heading-section font-display text-foreground mb-8">

@@ -3,9 +3,9 @@ import logo from "@/assets/brioni-logo.png";
 
 const FooterSection = () => {
   return (
-    <footer id="contact" className="py-24 sm:py-32 border-t border-border">
+    <footer id="contact" className="py-16 sm:py-24 lg:py-32 border-t border-border">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fade-up">
+        <div className="text-center mb-10 sm:mb-16 animate-fade-up">
           <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Контакт</p>
           <h2 className="heading-section font-display text-foreground mb-4">
             Резервирајте го вашиот момент
@@ -15,7 +15,7 @@ const FooterSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 mb-10 md:mb-16">
           <div className="space-y-6 animate-fade-up">
             <div className="flex items-start gap-4">
               <MapPin className="text-primary mt-1 flex-shrink-0" size={20} />

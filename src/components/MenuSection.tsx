@@ -22,7 +22,7 @@ const categories = [
 
 const MenuSection = () => {
   return (
-    <section id="menu" className="py-24 sm:py-32">
+    <section id="menu" className="py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {categories.map((cat, i) => (
@@ -34,9 +34,9 @@ const MenuSection = () => {
               <img
                 src={cat.image}
                 alt={cat.title}
-                className={`w-full aspect-[4/3] bg-secondary/30 ${cat.title === "Вина" ? "object-cover object-top" : "object-contain"}`}
+                className="w-full aspect-[4/3] bg-secondary/30 object-cover"
               />
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <h3 className="font-display text-xl text-foreground mb-3">{cat.title}</h3>
                 <p className="text-sm text-muted-foreground">{cat.description}</p>
               </div>
@@ -45,7 +45,7 @@ const MenuSection = () => {
         </div>
 
         <div
-          className="text-center mt-12 animate-fade-up"
+          className="text-center mt-8 sm:mt-12 animate-fade-up"
           style={{ animationDelay: "500ms" }}
         >
           <a

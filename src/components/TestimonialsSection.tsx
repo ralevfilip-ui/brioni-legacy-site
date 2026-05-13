@@ -26,11 +26,11 @@ const TestimonialsSection = () => {
   const prev = () => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section className="py-24 sm:py-32 bg-secondary/30">
+    <section className="py-16 sm:py-24 lg:py-32 bg-secondary/30">
       <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
         <div className="animate-fade-up">
           <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4">Впечатоци</p>
-          <h2 className="heading-section font-display text-foreground mb-16">
+          <h2 className="heading-section font-display text-foreground mb-10 sm:mb-16">
             Зборовите на нашите гости
           </h2>
         </div>
